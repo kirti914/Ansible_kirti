@@ -1,0 +1,15 @@
+---
+- hosts: all
+  name: Opening Firewall
+  tasks:
+    - name: Access Firewall
+      firewalld:
+        zone: public
+        port: 8081/tcp
+        permanent: yes
+        state: enabled
+
+    - name: Reload Firewall Services
+      service:
+        name: firewalld
+        state: restarted

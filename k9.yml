@@ -1,0 +1,19 @@
+---
+- name: Disk Utilization
+  hosts: localhost
+  tasks:
+    - name: Disk usage from command module
+      command: df -h
+      register: space
+    - debug:
+          var: space.stdout_lines
+
+    - name: Memory Utilization
+      vars:
+        msg: |
+          RAM: "{{ ansible_memtotal_mb }}"
+          SWAP: "{{ ansible_memory_mb.swap.total }}"
+      debug:
+        msg: "{{ msg.split('\n') }}"
+
+     

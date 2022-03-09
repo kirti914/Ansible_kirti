@@ -1,0 +1,6 @@
+---
+- hosts: all
+  tasks:
+    - shell: nc -z -w 1 -G 1 all {{ item }} || echo "Port is closed"
+      with_items: [80,443,8443]
+

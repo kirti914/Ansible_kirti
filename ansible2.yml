@@ -1,0 +1,16 @@
+---
+- hosts: all
+  become: no
+  gather_facts: yes
+  tasks:
+    - name: Install the latest version of apache
+
+      block:
+       - name: Install httpd and memcached
+         ansible.builtin.yum:
+           name:
+           - httpd
+           - memcached
+           state: present
+
+

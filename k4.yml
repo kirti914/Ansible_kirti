@@ -1,0 +1,7 @@
+---
+- hosts: all
+  tasks:
+   - name: append data
+     lineinfile:
+        path: /root/kp/abc.txt
+        line: Hi Hello How are you???
