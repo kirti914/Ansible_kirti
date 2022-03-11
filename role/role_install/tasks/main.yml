@@ -1,0 +1,6 @@
+---
+# tasks file for role_install
+- name: install httpt server
+  yum:
+    name: httpd
+    state: latest

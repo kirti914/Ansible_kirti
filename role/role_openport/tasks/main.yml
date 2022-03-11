@@ -1,0 +1,4 @@
+---
+# tasks file for role_openport
+- shell: nc -z -w 1 -G 1 my.hostname.com {{ item }} || echo "Port {{ item }} is closed"
+  with_items: [80,443,8443]

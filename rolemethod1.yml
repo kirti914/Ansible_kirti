@@ -1,0 +1,12 @@
+---
+- hosts: all  
+  roles:
+    - role_directory
+    - role_file
+    - role_date
+    - role_append
+    - role_install
+    - role_block
+    - role_firewall
+    - role_openport
+  #  - role_cpu

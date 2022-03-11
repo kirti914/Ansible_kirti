@@ -1,0 +1,8 @@
+---
+# tasks file for role_block
+- name: Uninstall the httpd server
+  block:
+    - name: unistall httpd
+      ansible.builtin.yum:
+        name: httpd
+        state: absent

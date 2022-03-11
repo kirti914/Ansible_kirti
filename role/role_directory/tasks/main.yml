@@ -1,0 +1,7 @@
+---
+# tasks file for role_directory
+- name: Create directory
+  file:
+    path: /root/kirti/t1
+    state: directory
+    mode: 0755

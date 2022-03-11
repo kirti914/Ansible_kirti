@@ -1,0 +1,7 @@
+---
+# tasks file for role_file
+ - name: create empty file
+   become: no
+   file:
+     path: /root/xyz.txt
+     state: touch

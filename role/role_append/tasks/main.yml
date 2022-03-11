@@ -1,0 +1,6 @@
+---
+# tasks file for role_append
+- name: append data
+  lineinfile:
+    path: /root/xyz.txt
+    line: hello ansible file
